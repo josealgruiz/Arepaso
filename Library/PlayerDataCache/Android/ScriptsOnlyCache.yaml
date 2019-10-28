@@ -7,7 +7,9 @@ ScriptsOnlyBuild:
     - FollowPlayer
     - FollowRotateWPlayer
     - GameManager
+    - GameOver
     - Health
+    - HealthSystem
     - MovementOnPC
     - MovementOnPhone
     - NextLevel
@@ -58,6 +60,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -87,15 +91,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10024}
     - Class: 114
+      Script: {instanceID: 10086}
+    - Class: 114
       Script: {instanceID: 10436}
     - Class: 114
       Script: {instanceID: 10518}
     - Class: 114
       Script: {instanceID: 10536}
     - Class: 114
+      Script: {instanceID: 10698}
+    - Class: 114
+      Script: {instanceID: 10864}
+    - Class: 114
       Script: {instanceID: 10994}
     - Class: 114
       Script: {instanceID: 11200}
+    - Class: 114
+      Script: {instanceID: 11380}
     - Class: 114
       Script: {instanceID: 11400}
     - Class: 114
@@ -107,7 +119,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11996}
     - Class: 114
+      Script: {instanceID: 12006}
+    - Class: 114
       Script: {instanceID: 12078}
+    - Class: 114
+      Script: {instanceID: 24544}
+    - Class: 114
+      Script: {instanceID: 34696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,6 +233,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12006}
     - Class: 114
       Script: {instanceID: 12078}
+    - Class: 114
+      Script: {instanceID: 24544}
+    - Class: 114
+      Script: {instanceID: 34696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -351,7 +373,7 @@ ScriptsOnlyBuild:
     className: copyposition
   - hash:
       serializedVersion: 2
-      Hash: 1db2c91dbd0446ea630663c91af8bf77
+      Hash: 3a4b420b0a86974deae0c908cf7cc772
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovementOnPhone
@@ -423,7 +445,7 @@ ScriptsOnlyBuild:
     className: PolyShape
   - hash:
       serializedVersion: 2
-      Hash: f164daaf8d4828af22e4a45741477679
+      Hash: 1727a4d2332f9e3b187928a4e5c6a56d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pickup
@@ -753,7 +775,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 3278f482f05a2deb3ba1577501033ba3
+      Hash: fb630af60fdcb73064d403593ce351cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Finish
@@ -877,6 +899,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOver
+  - hash:
+      serializedVersion: 2
+      Hash: 95560a177ffed5558a229125da699880
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthSystem
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity

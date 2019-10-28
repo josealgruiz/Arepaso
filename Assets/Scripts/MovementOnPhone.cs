@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementOnPhone : MonoBehaviour
-{
-
+{  
+    public Pickup pickup;
+    public HealthSystem healthSystem;
     public GameObject mainCamera;
     private Rigidbody rb;
     public float speed = 40f;
@@ -12,7 +13,9 @@ public class MovementOnPhone : MonoBehaviour
     private Vector3 baseAcceleration1;
     private float returnspeed = 4f;
     //public bool isFlat = true;
-    // Start is called before the first frame update
+        // Start is called before the first frame update
+        private Vector3 vec = new Vector3(0f, 1.5f, 0f); 
+        private Vector3 nul = new Vector3(0f, 0f, 0f);
     void Start()
     {
         rb= GetComponent<Rigidbody>();
@@ -52,12 +55,21 @@ public class MovementOnPhone : MonoBehaviour
 
             //si el jugador se cae resetea el nivel
                 if (rb.position.y <= -1 ){
-            FindObjectOfType<GameManager>().RestartGame();
+                rb.transform.position = (vec);
+                healthSystem.health -=1;
+                movement = nul;
+                pickup.activatePickups();
         }
-        
+    }
+
+    void Restart(){
+        rb.transform.position = (vec);
     }
 
     public void resetBase(){
         baseAcceleration = Input.acceleration;
     }
 }
+
+
+

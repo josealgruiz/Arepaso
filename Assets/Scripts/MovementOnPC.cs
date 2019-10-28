@@ -5,7 +5,7 @@ public class MovementOnPC : MonoBehaviour
   //public Rigidbody rb; se usa para referenciar rigidbody componente del objeto usado, recordar arrastrarlo en unity
     public Rigidbody rb;
     public float movementForce = 100f;
-
+    private Vector3 vec = new Vector3(0f, 1.5f, 0f); 
 
 
 
@@ -29,11 +29,11 @@ public class MovementOnPC : MonoBehaviour
             rb.AddForce(-movementForce * Time.deltaTime , 0, 0, ForceMode.VelocityChange);
         }
 
-                if (rb.position.y <= -1){
-            
-            FindObjectOfType<GameManager>().RestartGame();
-            
-        }
+             /*    if (rb.position.y <= -1 ){
+                
+           // FindObjectOfType<GameManager>().RestartGame();
+            rb.transform.position = (vec);
+        }*/
 
    
     }

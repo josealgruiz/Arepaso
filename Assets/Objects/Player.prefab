@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db620d61e4acde34d81acc8394b05077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickup: {fileID: 1035347319}
+  healthSystem: {fileID: 0}
   mainCamera: {fileID: 0}
   speed: 40
 --- !u!114 &5494592455671559303
@@ -171,3 +173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cQuesoT: {fileID: 0}
+  Done: 0

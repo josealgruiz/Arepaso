@@ -3,23 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     bool GameHasEnded = false;
     public float EndGameDelay = 2f;
 
     public GameObject CompleteLevelUI;
 
-    public void RestartGame (){
+    public void RestartGame (int health){
         if (GameHasEnded == false){
-        Debug.Log("Still have lives left!!");
         GameHasEnded = true;
         Invoke("Restart", EndGameDelay); 
-        //FindObjectOfType<Health>().dead();
+        
         //FindObjectOfType<Health>().health = FindObjectOfType<Health>().health-1;
         }
     }
 
     void Restart(){
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
@@ -32,4 +31,6 @@ public class GameManager : MonoBehaviour
     public void StartGame(){
         SceneManager.LoadScene("0");
     }
+
+
 }
