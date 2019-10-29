@@ -44,29 +44,24 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\copyposition.cs" />
-     <Compile Include="Assets\HealthSystem.cs" />
-     <Compile Include="Assets\LowPolyNature\Scripts\PlayerFollow.cs" />
+  <ItemGroup>     <Compile Include="Assets\LowPolyNature\Scripts\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\Bounce.cs" />
      <Compile Include="Assets\Scripts\Dash.cs" />
      <Compile Include="Assets\Scripts\Finish.cs" />
-     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\FollowRotateWPlayer.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
-     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\MovementOnPC.cs" />
      <Compile Include="Assets\Scripts\MovementOnPhone.cs" />
      <Compile Include="Assets\Scripts\NextLevel.cs" />
      <Compile Include="Assets\Scripts\Pause_Menu.cs" />
-     <Compile Include="Assets\Scripts\Pickup.cs" />
+     <Compile Include="Assets\Scripts\PickupJamon.cs" />
+     <Compile Include="Assets\Scripts\PickupQueso.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
      <Compile Include="Assets\Scripts\rotAndFollow.cs" />
-     <Compile Include="Assets\Scripts\RotateCamera.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\rotNfollowPhone.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
-     <Compile Include="Assets\test.cs" />
+     <Compile Include="Assets\Sprites\HealthSystem.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Software/Arepaso/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

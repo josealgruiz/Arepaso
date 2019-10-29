@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MovementOnPhone : MonoBehaviour
 {  
-    public Pickup pickup;
+    public PickupQueso PickupQueso;
+    public PickupJamon PickupJamon;
     public HealthSystem healthSystem;
     public GameObject mainCamera;
     private Rigidbody rb;
@@ -58,7 +59,8 @@ public class MovementOnPhone : MonoBehaviour
                 rb.transform.position = (vec);
                 healthSystem.health -=1;
                 movement = nul;
-                pickup.activatePickups();
+                PickupQueso.activatePickupQueso();
+                PickupJamon.activatePickupJamon();
         }
     }
 
