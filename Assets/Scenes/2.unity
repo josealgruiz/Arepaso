@@ -467,6 +467,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2073929478}
+    - target: {fileID: 8284987769661465407, guid: 7f343c7ace0c7fd4fa84f9433c51debf,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2073929478}
     - target: {fileID: 8284987769661465406, guid: 7f343c7ace0c7fd4fa84f9433c51debf,
         type: 3}
       propertyPath: m_SelectedEdges.Array.size
@@ -482,11 +487,6 @@ PrefabInstance:
       propertyPath: m_SelectedVertices.Array.data[2]
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 8284987769661465407, guid: 7f343c7ace0c7fd4fa84f9433c51debf,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2073929478}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f343c7ace0c7fd4fa84f9433c51debf, type: 3}
 --- !u!4 &179197799 stripped
@@ -831,7 +831,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183112
+  m_Name: pb_Mesh-1174
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3038,16 +3038,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2531623767315126519, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
+    - target: {fileID: 8050858266360659578, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
         type: 3}
-      propertyPath: healthSystem
-      value: 
-      objectReference: {fileID: 388642058}
-    - target: {fileID: 2531623767315126519, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050858266360659578, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
         type: 3}
-      propertyPath: mainCamera
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050858267954772274, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
+        type: 3}
+      propertyPath: cJamonT
       value: 
-      objectReference: {fileID: 656974135}
+      objectReference: {fileID: 1532475420}
     - target: {fileID: 446727162537337645, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
         type: 3}
       propertyPath: cQuesoT
@@ -3058,11 +3063,16 @@ PrefabInstance:
       propertyPath: Done
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8050858267954772274, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
+    - target: {fileID: 2531623767315126519, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
         type: 3}
-      propertyPath: cJamonT
+      propertyPath: healthSystem
       value: 
-      objectReference: {fileID: 1532475420}
+      objectReference: {fileID: 388642058}
+    - target: {fileID: 2531623767315126519, guid: 6e33c1d890c4b754dac7eb71f5b436bd,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 656974135}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e33c1d890c4b754dac7eb71f5b436bd, type: 3}
 --- !u!114 &7604735944810061366 stripped
