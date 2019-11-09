@@ -6,7 +6,6 @@ using UnityEngine;
 public class StartGame : MonoBehaviour
 {
   
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKey("o")){
@@ -16,6 +15,7 @@ public class StartGame : MonoBehaviour
     }
 
     public void Estart(){
+                PlayerPrefs.SetInt("health",3);
         FindObjectOfType<GameManager>().StartGame();
     }
 }

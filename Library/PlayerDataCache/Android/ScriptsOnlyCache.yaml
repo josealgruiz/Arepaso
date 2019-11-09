@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - PickupQueso
     - Rotator
     - StartGame
+    - Timer
     - rotNfollowPhone
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.EditorToolbar
@@ -23,6 +24,7 @@ ScriptsOnlyBuild:
     - UnityEngine.ProBuilder.ProBuilderMesh
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -112,6 +114,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11798}
     - Class: 114
       Script: {instanceID: 12072}
+    - Class: 114
+      Script: {instanceID: 54740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -213,6 +217,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11798}
     - Class: 114
       Script: {instanceID: 12072}
+    - Class: 114
+      Script: {instanceID: 54740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -314,6 +320,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11798}
     - Class: 114
       Script: {instanceID: 12072}
+    - Class: 114
+      Script: {instanceID: 54740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -444,7 +452,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: d83bf072471dce402fb0a4dfae86ff6e
+      Hash: 1db2c91dbd0446ea630663c91af8bf77
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovementOnPhone
@@ -522,7 +530,7 @@ ScriptsOnlyBuild:
     className: PolyShape
   - hash:
       serializedVersion: 2
-      Hash: d51f71c099fb4481cc68fadf3cdee45c
+      Hash: d9c5bfed099441cf4c3f418aace12f03
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickupQueso
@@ -792,7 +800,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 2b362006afbbf581bcec93ede7ed0ffc
+      Hash: 0c1760be3716d31978ec92553e957b35
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickupJamon
@@ -846,7 +854,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: abe290438f9dfffda697b2afdecc4710
+      Hash: caafc1369092ce8631237d55257b9bd1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Finish
@@ -958,6 +966,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d9933f04f9b477314587180d0e8e70ab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity

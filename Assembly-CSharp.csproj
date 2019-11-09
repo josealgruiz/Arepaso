@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\rotNfollowPhone.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Software/Arepaso/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

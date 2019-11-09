@@ -5,6 +5,7 @@ public class Finish : MonoBehaviour
     public PickupQueso PickupQueso;
     public PickupJamon PickupJamon;
     public MovementOnPC MovementOnPC;
+    public MovementOnPhone MovementOnPhone;
     public GameObject ScoreUI;
     public GameObject HealthUI;
     private bool queso = false;
@@ -14,6 +15,7 @@ public class Finish : MonoBehaviour
   private void OnTriggerEnter(Collider collider) {
      // Debug.Log(collider.name);
         if(collider.tag == "Player" ){ 
+            Time.timeScale = 0.5f;
             quesoCheck = PickupQuesoActive();
             jamonCheck = PickupJamonActive();
             if(quesoCheck == PickupQueso.Done){
@@ -31,9 +33,10 @@ public class Finish : MonoBehaviour
         if (collider.tag == "Player" && queso && jamon){
             //Debug.Log("BOOOM!!!");
             MovementOnPC.enabled =false;
+            MovementOnPhone.enabled = false;
+            FindObjectOfType<GameManager>().NextLevel();
             ScoreUI.SetActive(false);
             HealthUI.SetActive(false);
-            FindObjectOfType<GameManager>().NextLevel();
         }
    }
 

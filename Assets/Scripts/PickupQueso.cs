@@ -10,14 +10,16 @@ public class PickupQueso : MonoBehaviour
     public Text cQuesoT;
     GameObject[] Queso;
     public bool Done =false;
-    public bool Skip =true;
-
+   // public bool Skip =true;
+    public GameObject ScoreUI;
+    private int quesol;
 
     // Start is called before the first frame update
     void Start()
     {
         setCQuesoT();
         Queso = GameObject.FindGameObjectsWithTag("Queso");
+        quesol = Queso.Length;
     }
 
   private void OnTriggerEnter(Collider collider) {
@@ -27,8 +29,9 @@ public class PickupQueso : MonoBehaviour
             cQueso++;
             setCQuesoT();
             Done=false;
-        if(Queso.Length == cQueso){
+        if(quesol == cQueso){
             Done=true;
+            ScoreUI.SetActive(false);
         } 
         }
 }
@@ -40,7 +43,34 @@ public class PickupQueso : MonoBehaviour
         return cQueso;
     }
 
- public void activateQueso() {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*public void activateQueso() {
      if(Skip == false){
          for(int i = 0; i<=Queso.Length-1;i++){
             Queso[i].SetActive(true);
@@ -55,5 +85,5 @@ public class PickupQueso : MonoBehaviour
 
 public void activatePickupQueso(){
     activateQueso();
-}
-}
+}*/
+

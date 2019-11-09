@@ -139,9 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db620d61e4acde34d81acc8394b05077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupQueso: {fileID: 446727162537337645}
-  PickupJamon: {fileID: 8050858267954772274}
-  healthSystem: {fileID: 0}
   mainCamera: {fileID: 0}
   speed: 40
 --- !u!114 &446727162537337645
@@ -158,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cQuesoT: {fileID: 0}
   Done: 0
-  Skip: 1
+  ScoreUI: {fileID: 0}
 --- !u!114 &8050858267954772274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,11 +163,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7590810837623819377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a986897a562fd234a8a05a8b66c573b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cJamonT: {fileID: 0}
   Done: 0
-  Skip: 0
+  ScoreUI: {fileID: 0}

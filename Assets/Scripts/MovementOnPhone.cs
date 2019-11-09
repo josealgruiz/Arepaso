@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class MovementOnPhone : MonoBehaviour
 { 
-    public float EndGameDelay = 0.5f;
-    public PickupQueso PickupQueso;
-    public PickupJamon PickupJamon;
-    public HealthSystem healthSystem;
+  
     public GameObject mainCamera;
     private Rigidbody rb;
     public float speed = 40f;
     private Vector3 baseAcceleration;
     private Vector3 baseAcceleration1;
     private float returnspeed = 4f;
-    //public bool isFlat = true;
-        // Start is called before the first frame update
-        private Vector3 vec = new Vector3(0f, 1.5f, 0f); 
-        private Vector3 nul = new Vector3(0f, 0f, 0f);
-    private bool play =true;
+
+
     void Start()
     {
         rb= GetComponent<Rigidbody>();
@@ -52,43 +46,21 @@ public class MovementOnPhone : MonoBehaviour
 
         Vector3 movement = (fromCameraToMe * moveV + mainCamera.transform.right * moveH)* speed;
                             
-             //Vector3 movement = new Vector3 (moveH, 0.0f, moveV);
              rb.AddForce(movement * Time.deltaTime, ForceMode.VelocityChange);
 
-        if(play==false){
-            
-            Debug.Log("entro");
-            play=true; 
-            //Invoke("latestart", 0.3f); 
-            rb.AddForce(-movement * Time.deltaTime, ForceMode.VelocityChange);        
-        }
 
             //si el jugador se cae resetea el nivel
-            if (rb.position.y <= -1 ){
-                play=false;
-                healthSystem.health -=1;
-                Restart();
-                PickupQueso.activatePickupQueso();
-                PickupJamon.activatePickupJamon();
+            if (rb.position.y <= -1){
+                FindObjectOfType<GameManager>().RestartGame();
         }
     }
 
-    void Restart(){
-        rb.transform.position = (vec);
-    }
-
-    void latestart(){
-        Time.timeScale = 1f;
-    }
 
     public void resetBase(){
         baseAcceleration = Input.acceleration;
     }
 
-   /* private float setVelocity(){
-        float mov;
-        return mov =0f;
-    }*/
+
 }
 
 

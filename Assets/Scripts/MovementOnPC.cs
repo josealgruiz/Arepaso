@@ -29,13 +29,7 @@ public class MovementOnPC : MonoBehaviour
             rb.AddForce(-movementForce * Time.deltaTime , 0, 0, ForceMode.VelocityChange);
         }
 
-             /*    if (rb.position.y <= -1 ){
-                
-           // FindObjectOfType<GameManager>().RestartGame();
-            rb.transform.position = (vec);
-        }*/
-
-   
+          
     }
 
    

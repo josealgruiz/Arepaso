@@ -6240,6 +6240,7 @@ MonoBehaviour:
   PickupQueso: {fileID: 0}
   PickupJamon: {fileID: 0}
   MovementOnPC: {fileID: 0}
+  MovementOnPhone: {fileID: 0}
   ScoreUI: {fileID: 0}
   HealthUI: {fileID: 0}
 --- !u!1 &9182314156509402045

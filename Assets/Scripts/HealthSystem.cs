@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class HealthSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
+        health = PlayerPrefs.GetInt("health",3);
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
@@ -50,6 +51,10 @@ public class HealthSystem : MonoBehaviour
                 gameOver.gameObject.SetActive(true);
                 ScoreUI.SetActive(false);
             break;
+        }
+
+        if (PlayerPrefs.GetInt("health")<0){
+            SceneManager.LoadScene("Menu"); 
         }
 
     }

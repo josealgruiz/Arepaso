@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject CompleteLevelUI;
 
-    public void RestartGame (int health){
+    public void RestartGame (){
         if (GameHasEnded == false){
         GameHasEnded = true;
+        int health= PlayerPrefs.GetInt("health");
+        PlayerPrefs.SetInt("health", health-1);
         Invoke("Restart", EndGameDelay); 
-        
-        //FindObjectOfType<Health>().health = FindObjectOfType<Health>().health-1;
         }
     }
 
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel(){
-        Debug.Log("Next Level");
+        Time.timeScale = 1f;
         CompleteLevelUI.SetActive(true);
     }
 

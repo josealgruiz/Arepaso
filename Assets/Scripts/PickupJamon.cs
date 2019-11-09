@@ -10,14 +10,15 @@ public class PickupJamon : MonoBehaviour
     public Text cJamonT;
     GameObject[] Jamon;
     public bool Done =false;
-        public bool Skip =true;
 
+    public GameObject ScoreUI;
+    private int jamonl;
 
-    // Start is called before the first frame update
     void Start()
     {
         setCJamonT();
         Jamon = GameObject.FindGameObjectsWithTag("Jamon");
+        jamonl = Jamon.Length;
     }
 
   private void OnTriggerEnter(Collider collider) {
@@ -27,9 +28,10 @@ public class PickupJamon : MonoBehaviour
             cJamon++;
             setCJamonT();
             Done=false;
-        if(Jamon.Length == cJamon){
+          if(jamonl == cJamon){
             Done=true;
-        } 
+            ScoreUI.SetActive(false);
+        }
         }
 }
 
@@ -40,19 +42,4 @@ public class PickupJamon : MonoBehaviour
         return cJamon;
     }
 
- public void activateJamon() {
-     if(Skip == false){
-         for(int i = 0; i<=Jamon.Length-1;i++){
-            Jamon[i].SetActive(true);
-         }}
-         else{
-    cJamon=0;
-    setCJamonT();
-}    cJamon=0;
-    setCJamonT();
-}
-
-public void activatePickupJamon(){
-    activateJamon();
-}
 }
