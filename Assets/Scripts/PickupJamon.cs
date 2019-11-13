@@ -10,6 +10,7 @@ public class PickupJamon : MonoBehaviour
     public Text cJamonT;
     GameObject[] Jamon;
     public bool Done =false;
+    public AudioSource sonido;
 
     public GameObject ScoreUI;
     private int jamonl;
@@ -19,12 +20,14 @@ public class PickupJamon : MonoBehaviour
         setCJamonT();
         Jamon = GameObject.FindGameObjectsWithTag("Jamon");
         jamonl = Jamon.Length;
+        sonido = GetComponent<AudioSource> ();
     }
 
   private void OnTriggerEnter(Collider collider) {
 
         if (collider.gameObject.CompareTag("Jamon")){
             collider.gameObject.SetActive (false);
+            sonido.Play();
             cJamon++;
             setCJamonT();
             Done=false;

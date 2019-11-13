@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 
     bool GameHasEnded = false;
     public float EndGameDelay = 2f;
-
     public GameObject CompleteLevelUI;
 
     public void RestartGame (){
@@ -24,6 +23,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel(){
+
         Time.timeScale = 1f;
         CompleteLevelUI.SetActive(true);
     }

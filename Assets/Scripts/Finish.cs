@@ -12,8 +12,12 @@ public class Finish : MonoBehaviour
     private bool quesoCheck = false;
         private bool jamon = false;
     private bool jamonCheck = false;
+    public AudioSource sonido;
+
+
   private void OnTriggerEnter(Collider collider) {
      // Debug.Log(collider.name);
+        
         if(collider.tag == "Player" ){ 
             Time.timeScale = 0.5f;
             quesoCheck = PickupQuesoActive();
@@ -32,6 +36,8 @@ public class Finish : MonoBehaviour
 
         if (collider.tag == "Player" && queso && jamon){
             //Debug.Log("BOOOM!!!");
+            sonido = GetComponent<AudioSource> ();
+            sonido.Play();
             MovementOnPC.enabled =false;
             MovementOnPhone.enabled = false;
             FindObjectOfType<GameManager>().NextLevel();

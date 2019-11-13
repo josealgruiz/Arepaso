@@ -13,6 +13,7 @@ public class PickupQueso : MonoBehaviour
    // public bool Skip =true;
     public GameObject ScoreUI;
     private int quesol;
+    public AudioSource sonido;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,14 @@ public class PickupQueso : MonoBehaviour
         setCQuesoT();
         Queso = GameObject.FindGameObjectsWithTag("Queso");
         quesol = Queso.Length;
+        sonido = GetComponent<AudioSource> ();
     }
 
   private void OnTriggerEnter(Collider collider) {
 
         if (collider.gameObject.CompareTag("Queso")){
             collider.gameObject.SetActive (false);
+            sonido.Play();
             cQueso++;
             setCQuesoT();
             Done=false;
